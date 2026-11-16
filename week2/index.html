@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的笔记</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 顶部栏：标题 + 新建按钮 -->
+  <header class="topbar">
+    <h1 class="logo">我的笔记</h1>
+    <input id="note-title" class="input-new" type="text" placeholder="新笔记标题…" />
+    <button class="btn-new" type="button">＋ 新建笔记</button>
+  </header>
+
+  <!-- 笔记列表：一个 article 就是一张卡片 -->
+  <main class="note-list">
+
+    <article class="note-card">
+      <div class="note-meta">
+        <span class="tag">高等数学</span>
+        <time>11 月 12 日</time>
+      </div>
+      <h2 class="note-title">极限的定义与性质</h2>
+      <p class="note-excerpt">
+        数列极限的 ε-N 定义：对任意 ε &gt; 0，存在正整数 N，当 n &gt; N 时，都有 |aₙ − a| &lt; ε……
+      </p>
+    </article>
+
+    <article class="note-card">
+      <div class="note-meta">
+        <span class="tag">线性代数</span>
+        <time>11 月 13 日</time>
+      </div>
+      <h2 class="note-title">矩阵可逆的等价条件</h2>
+      <p class="note-excerpt">
+        矩阵 A 可逆 ⇔ 行列式不为零 ⇔ 满秩 ⇔ 齐次方程 Ax=0 只有零解。
+      </p>
+    </article>
+
+    <article class="note-card">
+      <div class="note-meta">
+        <span class="tag">大学英语</span>
+        <time>11 月 11 日</time>
+      </div>
+      <h2 class="note-title">定语从句的三个易错点</h2>
+      <p class="note-excerpt">
+        1. which 和 that 在非限制性从句里不能互换；2. 介词后面只能用 which……
+      </p>
+    </article>
+
+    <article class="note-card">
+      <div class="note-meta">
+        <span class="tag">计算机网络</span>
+        <time>11 月 9 日</time>
+      </div>
+      <h2 class="note-title">TCP 三次握手为什么不是两次</h2>
+      <p class="note-excerpt">
+        两次握手无法确认客户端的接收能力和服务端的发送能力，且历史重复连接请求会造成资源浪费……
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="foot">
+    第 2 周 · 数据驱动页面
+  </footer>
+
+  <!-- 第 2 周：所有逻辑写在这个文件里 -->
+  <script src="script.js"></script>
+
+</body>
+</html>
