@@ -428,3 +428,269 @@ body {
   border-color: var(--accent);
   color: var(--accent);
 }
+/* ===== 第 8 周：图片上传 ===== */
+.file-label {
+  display: block;
+  padding: 14px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.file-label:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.preview {
+  display: block;
+  margin-top: 12px;
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.note-image {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+}
+.file-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+/* 手机调试用：把 JS 报错显示在页面顶部 */
+.js-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0;
+  padding: 10px 12px;
+  background: #b91c1c;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+/* 手机调试用：显示每一步的状态 */
+.debug-line {
+  margin: 0 0 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f0ece4;
+  color: #6b7280;
+  font-size: 11px;
+  line-height: 1.5;
+  font-family: Consolas, Menlo, monospace;
+  word-break: break-all;
+}
+/* 第 9 周：OCR 提示 */
+.hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+/* 正文保留换行（OCR 结果和手写换行都能显示出来） */
+.detail-body {
+  white-space: pre-wrap;
+}
+
+/* AI 整理结果 */
+.organized-block {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--line);
+}
+
+.organized-label {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.organized-body {
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #3f3a33;
+}
+/* 第 11 周：知识点列表 */
+.point-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.point-item {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3f3a33;
+}
+
+.point-item::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+/* 修复：Tailwind 把 ol/ul 的编号清掉了，这里找回来 */
+.point-list {
+  list-style: decimal;
+  padding-left: 24px;
+}
+/* ===== 第 12 周：出题与复习 ===== */
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-actions .btn-ghost {
+  text-decoration: none;
+}
+
+.quiz-progress {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+
+.quiz-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+}
+
+.quiz-q {
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 600;
+}
+
+.quiz-a {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3f3a33;
+}
+
+.quiz-a-label {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.quiz-summary {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  line-height: 2;
+}
+
+.quiz-rate {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 6px 0;
+}
+
+.hint a {
+  color: var(--accent);
+  text-decoration: none;
+}
+/* ===== 第 13 周：错题本 + 界面调整 ===== */
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.page-head .detail-title {
+  margin-bottom: 0;
+}
+
+.mistake-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.mistake-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mistake-count {
+  font-size: 12px;
+  color: #b91c1c;
+  background: #fef2f2;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.mistake-src {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.mistake-q {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* 按钮多了要能换行，不然挤成一团 */
+.detail-actions {
+  flex-wrap: wrap;
+}
+
+.topbar {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.top-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 19px;
+  }
+
+  .btn-new,
+  .btn-ghost {
+    padding: 8px 13px;
+    font-size: 13px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+  }
+}
